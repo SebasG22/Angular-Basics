@@ -1,0 +1,25 @@
+<html>
+<head>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+</head>    
+<body>
+      <div ng-app>
+          <label> Type a word: </label>
+          <input type="text" placeholder="Word" ng-model="word">
+          
+          <label> Type a font name </label>
+          <input type="text" placeholder="Arial,Courier" ng-model="font">
+          
+          <label> Type the size <label>
+          <input type="text" placeholder="Number" ng-model="size">
+          
+          <label> Type a color </label>
+          <input type="text" placeholder="Red, Green ..." ng-model="color">
+          
+          <hr>
+          
+          <p> <font color="{{color}}" face="{{font}}" size="{{size}}"> {{word}}</font></p>
+              
+      </div>  
+</body>
+</html>
