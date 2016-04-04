@@ -1,0 +1,38 @@
+<html ng-app="MyApp">
+ <head>
+   <link rel="stylesheet" href="css/contact.css">
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+   <script type="text/javascript" src="js/controller.js"></script>
+ </head>
+ <body>
+     
+     <label>Type a word </label>
+      <input type="text" placeholder="word" ng-model="word">
+      
+      <hr>
+      
+      <h1>{{word}}</h1>
+     <h2>Phone Book</h2>
+      <div ng-controller="mainCon">
+          
+          <p> {{phoneBook.length}} Contacts in PhoneBook</p>
+          
+          <ul>
+              <li ng-repeat="contact in phoneBook">
+                  <input type="checkbox" ng-model="contact.marked">
+                  <span class="marked-{{contact.marked}}">{{contact.contact}}</span>
+             </li>
+          </ul>
+          
+          <form ng-submit="addcontact()">
+              <button type="submit">New Contact </button>
+              <input type="text" size="30" placeholder="Contact Name" ng-model="newcontact">
+          </form> 
+          
+                     
+      </div>
+      
+      
+ </body>      
+</html>
+    
