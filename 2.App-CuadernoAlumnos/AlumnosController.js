@@ -12,6 +12,12 @@ miApp.controller("AlumnosController",function ($scope) {
     $scope.Guardar=function () {
         $scope.alumnos.push({nombre:$scope.nuevoAlumno.nombre ,
                              telefono:$scope.nuevoAlumno.telefono,
-                             nombre:$scope.nuevoAlumno.curso})
+                             curso:$scope.nuevoAlumno.curso});
+        $scope.formularioVisible=false;
+        console.log($scope.formularioVisible);
+    }
+    $scope.MuestraFormulario=function () {
+        $scope.formularioVisible=true;
+        console.log($scope.formularioVisible)
     }
 })
