@@ -8,5 +8,10 @@ miApp.controller("AlumnosController",function ($scope) {
         {nombre: "Ligia Guevara", telefono: "3103317685", curso: "HTML & CSS3"},
         {nombre: "Paola Guevara", telefono: "3189876689", curso: "Diseño Adaptable"},
         {nombre: "Stefany Mojica", telefono: "3134567321", curso: "Manejo Básico de JavaScript"}
-    ]
+    ];
+    $scope.Guardar=function () {
+        $scope.alumnos.push({nombre:$scope.nuevoAlumno.nombre ,
+                             telefono:$scope.nuevoAlumno.telefono,
+                             nombre:$scope.nuevoAlumno.curso})
+    }
 })
